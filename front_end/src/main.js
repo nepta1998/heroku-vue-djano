@@ -5,7 +5,7 @@ import router from "./router";
 import store from "./store";
 
 Vue.config.productionTip = false;
-//hola
+//hola, intentando hacer merge de otra ramaaaa
 new Vue({
   router,
   store,
