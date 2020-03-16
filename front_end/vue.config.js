@@ -6,5 +6,6 @@ module.exports = {
     appleMobileWebAppCapable: "yes",
     appleMobileWebAppStatusBarStyle: "black"
   },
-  transpileDependencies: ["vuetify"]
+  transpileDependencies: ["vuetify"],
+  lintOnSave: process.env.NODE_ENV !== "production"
 };
