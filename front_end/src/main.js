@@ -9,7 +9,8 @@ import "@mdi/font/css/materialdesignicons.css";
 import Axios from "axios";
 //haciendo un cambio
 Vue.config.productionTip = false;
-Axios.defaults.baseURL= process.env.NODE_ENV === 'production'
+Axios.defaults.baseURL =
+  process.env.NODE_ENV === "production"
     ? "https://phoenixwaretestbackend.herokuapp.com/v1.0/api/"
     : "http://localhost:8000/v1.0/api/";
 new Vue({

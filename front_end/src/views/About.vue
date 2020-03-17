@@ -12,7 +12,15 @@
       <v-col cols="12">
         <h1 class="primary--text display-4">JSON</h1>
       </v-col>
-      <v-col v-for="(item, i) in data" :key="i" cols="12">
+      <v-col cols="12" v-if="!data">
+        <v-sheet class="px-3 pt-3 pb-12" v-for="n in numbers" :key="n">
+          <v-skeleton-loader
+            class="mx-auto"
+            type="list-item-two-line"
+          ></v-skeleton-loader>
+        </v-sheet>
+      </v-col>
+      <v-col v-for="(item, i) in data" :key="i" cols="12" v-else>
         <v-card color="blue" dark>
           <div class="d-flex flex-no-wrap justify-space-between">
             <div>
@@ -35,7 +43,8 @@ export default {
   name: "About",
 
   data: () => ({
-    data: []
+    data: null,
+    numbers: [1, 2, 3, 4, 5 ,7,8,9,10]
   }),
   created() {
     Api.getAll()
